@@ -1,15 +1,14 @@
-# Replace with your unique project name
+# Colorblindness Scorer
 
 ## Description
 
 **version 1.0**
 
-Replace with a description of *what* your program does (not *how* it works)
-
+This program scores color combinations based on their distinguishability to those with colorblindness. The program does not take into account intensity of the light, and currently only takes into account proximity based on sRGB colorspace mapping
 
 ## Developer
 
-Replace with your name
+Irfan Srichai
 
 ## Example
 
@@ -23,5 +22,13 @@ g++ --std=c++11 *.cpp -o cvp
 Here is an example of the program running:
 
 ```
-Replace this with a copy-pasted example of the input/output of your program running.
+Enter an sRGB color code in hexadecimal. Format like so: "RR GG BB": 
+21 2c 9e
+Enter a second sRGB color code in hexadecimal. Format like so: "RR GG BB" 
+c4 0e 0e
+The measured score for Deuteranopia (red-green color blindness) is: 0.00496184
+
+A lower score indicates a greater proximity between the two values
+in terms of long and short cones, and indicates a potentially
+bad color combination which may appear similar to deutan-type color-blindness.
 ```
