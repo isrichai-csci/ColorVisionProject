@@ -23,10 +23,10 @@ Here is an example of the program running:
 
 ```
 Enter an sRGB color code in hexadecimal. Format like so: "RR GG BB": 
-21 2c 9e
+FF DD CC
 Enter a second sRGB color code in hexadecimal. Format like so: "RR GG BB" 
-c4 0e 0e
-The measured score for Deuteranopia (red-green color blindness) is: 0.00496184
+BB AA 99
+The measured score for Deuteranopia (red-green color blindness) is: 9.50835e-06
 
 A lower score indicates a greater proximity between the two values
 in terms of long and short cones, and indicates a potentially
