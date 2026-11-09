@@ -88,6 +88,8 @@ int main() {
 
     if (!input.is_open()) {
         std::cout << "Error: The input file cannot be read from!";
+        output.close();
+        input.close();
         return 0; 
     }
 
@@ -102,6 +104,9 @@ int main() {
             ) << "\n";
         };
     }
+    
+    output.close();
+    input.close();
 
     std::cout << "Line-by-line scores written to " << outputFilename << ".";
     std::cout << "\nA lower score indicates a greater proximity between the two values" 
@@ -115,7 +120,7 @@ int main() {
 // Derived from CIELAB L* formula. Measures the lightness of a color (proximity to black/white). 
 // Assumes reference white point Yn = 1, which we do transform the RGB in accordance to. 
 // L* ranges from 0 - 1 rather than 0 to 100 here. 
-// Will be used to assign special weights to luminosity.
+// Will be used to assign special weights to lightness.
 double yToLightness(double Y) {
     if (Y > CUBED(6 / 29)) return 1.16 * std::cbrt(Y) - .16;
     else return 9.033 * Y;
