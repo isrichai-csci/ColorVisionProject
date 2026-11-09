@@ -2,7 +2,7 @@
 
 ## Description
 
-**version 1.0**
+**version 1.1**
 
 This program scores color combinations based on their distinguishability to those with colorblindness. The program takes in input via a file containing a line-broken list of color tuples, and assesses each color tuple in separate tests. A score is given which indicates the color's distinguishability. The program makes no assessment to the objective pass/fail of a particular color; such threshold is to be determined qualitatively by the user. 
 
